@@ -14,7 +14,7 @@ if [ $? != 0 ]; then
   tmux new-session -d -s "$SESSION_NAME" -n 'Code' 'nvim'
 
   # Split the window vertically (creates pane 1 to the right)
-  tmux split-window -h -t "$SESSION_NAME":0.0
+  tmux split-window -v -p 25 -t "$SESSION_NAME":0.0
 
   # Send the 'R' command to the new pane (pane 1) and press Enter
   tmux send-keys -t "$SESSION_NAME":0.1 'R' C-m

@@ -66,21 +66,13 @@ vim.g.localleader = " " -- Optional: Set localleader too if you use it
 
 -- Basic Neovim options (can be here or after lazy setup)
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- Load plugins from lua/plugins directory
 require("lazy").setup("plugins")
-
--- Basic Neovim options (optional)
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.g.mapleader = " " -- Set leader key to Space
 EOF
 
 # --- 3c. Create R plugins file ---

@@ -7,7 +7,7 @@ echo "🚀 Starting Minimal R + Neovim + Slime + Tmux Setup..."
 
 # --- 1. Install System Dependencies ---
 echo "🔧 Installing system packages (neovim, r, tmux, git, base-devel)..."
-sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel
+sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel picom
 
 # Optional: Install clipboard tool (useful for vim-slime/nvim)
 # Check if running Wayland or X11 - this is a basic check
@@ -65,6 +65,7 @@ vim.g.mapleader = " " -- Your leader key definition
 vim.g.localleader = " " -- Optional: Set localleader too if you use it
 
 -- Basic Neovim options (can be here or after lazy setup)
+vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.expandtab = true
@@ -194,3 +195,11 @@ echo "3. Use the 'start_R_dev.sh' script (or manually set up tmux) to start your
 echo "   - nvim in one pane, R console in the other."
 echo "   - Use your leader key (Space) + 'rl'/'rs'/'rp' or Visual mode + '<leader>r' to send code."
 echo "   - Use Ctrl+Space for LSP completion."
+
+echo "Setting up config files"
+./symlinking.sh
+echo "Symlinkg DONE"
+
+echo "Setting utility scripts"
+mkdir -p ~/bin
+find "$HOME/Documents/repos/archlinux_setup/scripts" -maxdepth 1 -type f -exec chmod +x {} \; -exec ln -sf {} "$HOME/bin/" \;

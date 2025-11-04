@@ -7,7 +7,7 @@ echo "🚀 Starting Minimal R + Neovim + Slime + Tmux Setup..."
 
 # --- 1. Install System Dependencies ---
 echo "🔧 Installing system packages (neovim, r, tmux, git, base-devel)..."
-sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel picom git-lfs fzf zathura-pdf-mupdf flameshot
+sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel picom git-lfs fzf zathura-pdf-mupdf flameshot alacritty
 
 # Optional: Install clipboard tool (useful for vim-slime/nvim)
 # Check if running Wayland or X11 - this is a basic check
@@ -203,3 +203,6 @@ echo "Symlinkg DONE"
 echo "Setting utility scripts"
 mkdir -p ~/bin
 find "$HOME/Documents/repos/archlinux_setup/scripts" -maxdepth 1 -type f -exec chmod +x {} \; -exec ln -sf {} "$HOME/bin/" \;
+
+echo "setting alacritty"
+mkdir -p ~/.config/alacritty

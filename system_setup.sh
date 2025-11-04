@@ -7,7 +7,7 @@ echo "🚀 Starting Minimal R + Neovim + Slime + Tmux Setup..."
 
 # --- 1. Install System Dependencies ---
 echo "🔧 Installing system packages (neovim, r, tmux, git, base-devel)..."
-sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel picom
+sudo pacman -Syu --needed --noconfirm neovim r tmux git base-devel picom git-lfs
 
 # Optional: Install clipboard tool (useful for vim-slime/nvim)
 # Check if running Wayland or X11 - this is a basic check

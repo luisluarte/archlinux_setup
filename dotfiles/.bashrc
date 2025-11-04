@@ -16,5 +16,10 @@ alias sv='sudo nvim'
 # git repos
 alias repos='cd ~/Documents/repos'
 
+# zathura fzf
+z () {
+    zathura "$(fzf)" & disown;
+}
+
 # add script folder to path
 export PATH="$HOME/bin:$PATH"

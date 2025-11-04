@@ -18,8 +18,9 @@ alias repos='cd ~/Documents/repos'
 
 # zathura fzf
 z () {
-    zathura "$(fzf)" & disown;
+    command zathura "$@" & disown;
 }
+alias zf='z "$(fzf)"'
 
 # add script folder to path
 export PATH="$HOME/bin:$PATH"

@@ -1,0 +1,54 @@
+# This is a minimal Alacritty configuration file in TOML format.
+#
+# Save this file at: ~/.config/alacritty/alacritty.toml
+
+[font]
+# Font size (in points)
+size = 12.0
+
+# Normal font face
+[font.normal]
+# The font family to use. "Fira Code" must be installed on your system.
+family = "Fira Code"
+style = "Regular"
+
+# Bold font face
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+# Italic font face
+[font.italic]
+family = "Fira Code"
+style = "Italic"
+
+# Colors (Alabaster Dark)
+# author tonsky
+
+[colors.primary]
+background = '#0E1415'
+foreground = '#CECECE'
+
+[colors.cursor]
+text = '#0E1415'
+cursor = '#CECECE'
+
+[colors.normal]
+black = '#0E1415'
+red = '#e25d56'
+green = '#73ca50'
+yellow = '#e9bf57'
+blue = '#4a88e4'
+magenta = '#915caf'
+cyan = '#23acdd'
+white = '#f0f0f0'
+
+[colors.bright]
+black = '#777777'
+red = '#f36868'
+green = '#88db3f'
+yellow = '#f0bf7a'
+blue = '#6f8fdb'
+magenta = '#e987e9'
+cyan = '#4ac9e2'
+white = '#FFFFFF'

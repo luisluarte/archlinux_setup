@@ -5,6 +5,7 @@ backup_dir="$HOME/.dotfile_backups/$(date +%f-%t)"
 
 declare -a files_to_link=(
     "dotfiles/config=$HOME/.config/i3/config"
+    "dotfiles/alacritty.toml=$HOME/.config/alacritty/alacritty.toml"
     "dotfiles/.bashrc=$HOME/.bashrc"
     "dotfiles/picom.conf=$HOME/.config/picom.conf"
     )

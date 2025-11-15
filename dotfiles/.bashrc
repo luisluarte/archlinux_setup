@@ -22,5 +22,11 @@ z () {
 }
 alias zf='z "$(fzf)"'
 
+# set default editor
+export EDITOR=nvim
+export VISUAL=nvim
+
 # add script folder to path
 export PATH="$HOME/bin:$PATH"
+
+. "$HOME/.local/bin/env"
